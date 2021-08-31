@@ -1,0 +1,210 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    /* background: #eb1008; */
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #ecd60e, #cf3008); */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #f14906, #f9fd0a); */
+
+
+    background: rgb(116,196,196);
+    background: -moz-linear-gradient(90deg, rgba(116,196,196,1) 0%, rgba(116,220,228,1) 30%, rgba(250,243,30,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(116,196,196,1) 0%, rgba(116,220,228,1) 30%, rgba(250,243,30,1) 100%);
+    background: linear-gradient(90deg, rgba(116,196,196,1) 0%, rgba(116,220,228,1) 30%, rgba(250,243,30,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#74c4c4",endColorstr="#faf31e",GradientType=1);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*Mueve el cuadro */
+    height: 850px;
+    justify-content:center;
+    align-items: center;
+}
+/*Titulo de la encuesta*/
+h2{
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-align: center;
+    font-weight: 700;
+}
+
+form{
+    background: #fff;
+    padding: 50px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+}
+
+.form{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 20px ;
+}
+
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus{ 
+    outline: none;
+    color: #5e5d5d;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #74c4c4;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #faf31e, #74c4c4
+    );
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+
+button{
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    background: rgb(16, 187, 187);  /* fallback for old browsers */
+   
+   
+    border: none;
+    border-radius: 10px;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: rgb(5, 0, 0);
+    height: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+
+@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+}
+
+.navbar{
+    background-color: #76c2c6;
+}
+ 
+ 
+.navbar .nav-link {
+    color: #f9f519;
+    margin-right: 29px;
+    transition: 0.2s;
+}
+ 
+a.nav-link:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid #f9f519;
+}
+ 
+.btn-custom {
+    border: 2px solid #f9f519;
+    border-radius: 50px;
+    color: #f9f519;
+    background: none;
+    padding: 10px 20px;
+    margin-top: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+ 
+.dropdown-menu{
+    border: 2px solid #f9f519;
+    border-radius: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+ 
+.contactomenu{
+    background-color: #76c2c6;
+}
+ 
+.contactomenu li a{
+    text-decoration: none;
+    padding: 5px;
+    color: #f9f519;
+}
+ 
+.contactomenu li a img{
+    padding-right: 10px;
+}
+ 
+.btn-custom:hover {
+    background: #f9f519;
+    color: #76c2c6;
+}
+ 
+
+.navbar-toggler {
+    padding: .10rem .45rem;
+    border: 1px solid white;
+}
+ 
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+ 
+.navbar-toggler i.bi-list {
+    color: white;
+    font-size: 1.6rem;
+}
+

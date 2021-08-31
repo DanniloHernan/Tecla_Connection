@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "06ca3a41-8e63-4ddd-81cc-23aa0f645a18",
+		"name": "Tecla Connection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autenticacion Tecla Connection",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"Dannilo_25\",\r\n    \"pass\": \"Dannilo_2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/autenticacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autenticacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Preliminar de Teclers Registrados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/listaTeclers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listaTeclers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperacion del ID del Tecler en la bases de datos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"Dannilo_25\",\r\n    \"pass\": \"Dannilo_2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/idTecler",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"idTecler"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar imagen Codificada en la Base de datos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"C:/Users/swain/Documents/ImagenesBD/avatar_f.png\",\r\n    \"usuario_id\": \"c97f16f3-ff0c-48b5-b149-51fd448fdc12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/imagen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"imagen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener imagen codificada de una base de datos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/imagen/8e47110b-b29e-432c-8d9f-0426cdcb02e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"imagen",
+						"8e47110b-b29e-432c-8d9f-0426cdcb02e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificacion de si el usuario es nuevo registro o si ya tiene un perfil con datos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/buscarDatos/8e47110b-b29e-432c-8d9f-0426cdcb02e3/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzdWFyaW8iOiJEYW5uaWxvXzI1IiwicGFzcyI6IkRhbm5pbG9fMjAyMSJ9LCJpYXQiOjE2Mjk5MjkzMTN9.LVu-y7rFnDFQUZy6p2YCKwdnZSIgMkj6dBjN69Tf0Uc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"buscarDatos",
+						"8e47110b-b29e-432c-8d9f-0426cdcb02e3",
+						"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzdWFyaW8iOiJEYW5uaWxvXzI1IiwicGFzcyI6IkRhbm5pbG9fMjAyMSJ9LCJpYXQiOjE2Mjk5MjkzMTN9.LVu-y7rFnDFQUZy6p2YCKwdnZSIgMkj6dBjN69Tf0Uc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener datos de perfil",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/datos_perfil/8e47110b-b29e-432c-8d9f-0426cdcb02e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"datos_perfil",
+						"8e47110b-b29e-432c-8d9f-0426cdcb02e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dar de alta nuevos usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"nombres\" : \"Tecler Uno\",\r\n                \"apellidos\": \"Connection\",\r\n                \"email\": \"tecla@mail.com\",\r\n                \"usuario\": \"Tecler_1\",\r\n                \"pass\": \"Tecler_1\",\r\n                \"tipo\": \"admin\"\r\n                }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/nuevoUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nuevoUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener comentarios a de un perfil",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/comentarios/4839f2b5-e495-4f2e-b9ed-61e00a8c35e0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"comentarios",
+						"4839f2b5-e495-4f2e-b9ed-61e00a8c35e0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar comentarios a un perfil",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_usuario\" : \"Tecler Dos\",\r\n    \"id_tecler\": \"4839f2b5-e495-4f2e-b9ed-61e00a8c35e0\",\r\n    \"comentario\": \"Eres una persona muy comprometida y talentosa, me inspiras\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/agregarComentario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agregarComentario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta calificacion rubro conocimientos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzdWFyaW8iOiJUZWNsYUFkbWluIiwicGFzcyI6IlRlY2xhXzEyMyJ9LCJpYXQiOjE2MzAxODE2MTZ9.tbFzxuHD9CeEtaEKMkKPiPD1VMknPD52STVTWOeB2MA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"base_datos\": \"3\",\r\n        \"apis\": \"3\",\r\n        \"testing\": \"4\",\r\n        \"seguridad\": \"4\",\r\n        \"teoria_objetos\": \"5\",\r\n        \"id_usuario\": \"8e47110b-b29e-432c-8d9f-0426cdcb02e3\",\r\n        \"usr\": {\r\n            \"usuario\": \"TeclaAdmin\",\r\n            \"pass\": \"Tecla_123\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/conocimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"conocimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta calificacion rubro tecnologias",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzdWFyaW8iOiJUZWNsYUFkbWluIiwicGFzcyI6IlRlY2xhXzEyMyJ9LCJpYXQiOjE2MzAxODE2MTZ9.tbFzxuHD9CeEtaEKMkKPiPD1VMknPD52STVTWOeB2MA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"node_js\": \"4\",\r\n        \"frontend\": \"4\",\r\n        \"swagger\": \"4\",\r\n        \"javascript\": \"5\",\r\n        \"id_usuario\": \"8e47110b-b29e-432c-8d9f-0426cdcb02e3\",\r\n        \"usr\": {\r\n            \"usuario\": \"TeclaAdmin\",\r\n            \"pass\": \"Tecla_123\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tecnologias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tecnologias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta calificacion rubro habilidades blandas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzdWFyaW8iOiJUZWNsYUFkbWluIiwicGFzcyI6IlRlY2xhXzEyMyJ9LCJpYXQiOjE2MzAxODE2MTZ9.tbFzxuHD9CeEtaEKMkKPiPD1VMknPD52STVTWOeB2MA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"enfoque\": \"3\",\r\n        \"trabajo_equipo\": \"4\",\r\n        \"compromiso\": \"4\",\r\n        \"comunicacion\": \"4\",\r\n        \"cap_aprendizaje\": \"5\",\r\n        \"resol_problemas\": \"3\",\r\n        \"id_usuario\": \"8e47110b-b29e-432c-8d9f-0426cdcb02e3\",\r\n        \"usr\": {\r\n            \"usuario\": \"TeclaAdmin\",\r\n            \"pass\": \"Tecla_123\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/habilidades_b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"habilidades_b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta calificacion rubro rendimiento",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzdWFyaW8iOiJUZWNsYUFkbWluIiwicGFzcyI6IlRlY2xhXzEyMyJ9LCJpYXQiOjE2MzAxODE2MTZ9.tbFzxuHD9CeEtaEKMkKPiPD1VMknPD52STVTWOeB2MA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"calidad_codigo\": \"4\",\r\n        \"velocidad_entrega\": \"4\",\r\n        \"performance_codigo\": \"5\",\r\n        \"id_usuario\": \"8e47110b-b29e-432c-8d9f-0426cdcb02e3\",\r\n        \"usr\": {\r\n            \"usuario\": \"TeclaAdmin\",\r\n            \"pass\": \"Tecla_123\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rendimiento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rendimiento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener valor de evaluacion de rendimiento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rendimiento/8e47110b-b29e-432c-8d9f-0426cdcb02e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rendimiento",
+						"8e47110b-b29e-432c-8d9f-0426cdcb02e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener valor de evaluacion de tecnologias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tecnologias/8e47110b-b29e-432c-8d9f-0426cdcb02e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tecnologias",
+						"8e47110b-b29e-432c-8d9f-0426cdcb02e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener valor de evaluacion de conocimientos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/conocimientos/8e47110b-b29e-432c-8d9f-0426cdcb02e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"conocimientos",
+						"8e47110b-b29e-432c-8d9f-0426cdcb02e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener valor de evaluacion de habilidades blandas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/habilidades_b/8e47110b-b29e-432c-8d9f-0426cdcb02e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"habilidades_b",
+						"8e47110b-b29e-432c-8d9f-0426cdcb02e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cambiar Imagen de usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiRGFubmlsb18yNSIsImlhdCI6MTYzMDI0ODY2MH0.RkmdOssRoa4-X6y8iUjdu6xjaRqq1JOOQxle_KGU3B8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imagen\": \"C:/Users/swain/Documents/ImagenesBD/avatar_f.png\",\r\n    \"usuario_id\": \"c97f16f3-ff0c-48b5-b149-51fd448fdc12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/imagen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"imagen"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

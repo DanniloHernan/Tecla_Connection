@@ -1,0 +1,390 @@
+<%- include('./cabeceras/cab_perfil_tecler')%>
+
+<body onload="mostrarDatos()" id="page-top">
+   <!-- Navigation-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top" id="sideNav">
+       <a class="navbar-brand js-scroll-trigger" href="#page-top">
+           <span class="d-block d-lg-none">Perfil Tecler</span>
+           <span class="d-none d-lg-block"><img id="imagenPerfil" width="100px" class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/iconos/usuario.png" alt="img_perfil" /></span>
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+       <div class="collapse navbar-collapse" id="navbarResponsive">
+           <ul class="navbar-nav">
+                <li class="nav-item mb-3"><a class="nav-link" href="http://localhost:3000/tecla_connection">Inicio</a></li>
+               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre mi</a></li>
+               <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a></li> -->
+               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educacion/Certificaciones</a></li>
+               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Tecla Skills</a></li>
+               <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#coments">Comentarios</a></li>
+           </ul>
+       </div>
+   </nav>
+   <!-- Page Content-->
+   <div class="container-fluid p-0">
+       <!-- About-->
+       <section class="resume-section" id="about">
+           <div class="resume-section-content">
+               <h1 id="nombre" class="mb-0"> 
+               </h1>
+               <div style="display: none" id="id_tecler"><%= id_tecler %></div>
+               <h2 id="titular"class="text-primary">
+               </h2>
+               <h3 id="ciudad"> 
+               </h3>
+               <h4 id="email" class="mb-5"> 
+                </h4>
+               <p id="sobre" class="lead mb-5"></p>
+               <div class="social-icons">
+                   <a id="linkedin" class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                   <a id="github" class="social-icon" href="#!"><i class="fab fa-github"></i></a>
+               </div>
+           </div>
+       </section>
+       <!-- <hr class="m-0" />
+       <section class="resume-section" id="experience">
+           <div class="resume-section-content">
+               <h2 class="mb-5">Experiencia</h2>
+               <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                   <div class="flex-grow-1">
+                       <h3 class="mb-0">Desarrollador Backend</h3>
+                       <div class="subheading mb-3">Tecla Coding Academy</div>
+                       <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                   </div>
+                   <div class="flex-shrink-0"><span class="text-primary">July 2021 - Present</span></div>
+               </div>
+               <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                   <div class="flex-grow-1">
+                       <h3 class="mb-0">Web Developer</h3>
+                       <div class="subheading mb-3">Intelitec Solutions</div>
+                       <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                   </div>
+                   <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
+               </div>
+               <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                   <div class="flex-grow-1">
+                       <h3 class="mb-0">Junior Web Designer</h3>
+                       <div class="subheading mb-3">Shout! Media Productions</div>
+                       <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+                   </div>
+                   <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
+               </div>
+               <div class="d-flex flex-column flex-md-row justify-content-between">
+                   <div class="flex-grow-1">
+                       <h3 class="mb-0">Web Design Intern</h3>
+                       <div class="subheading mb-3">Shout! Media Productions</div>
+                       <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                   </div>
+                   <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
+               </div>
+           </div>
+       </section> -->
+       <hr class="m-0" />
+       <!-- Education-->
+       <section class="resume-section" id="education">
+           <div class="resume-section-content">
+               <h2 class="mb-5 text-primary"><i class="fas fa-award text-warning"></i></i>Educacion</h2>
+               <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                   <div class="flex-grow-1">
+                       <h2 id="educacion" class="mb-3"></h2>
+                       <!-- <div class="subheading mb-3">Divicion de Ciencias Basicas e Ingenieria</div> -->
+                   </div>
+                   <div class="flex-grow-1">
+                       Idiomas:
+                    <h3 id="idioma" class="mb-0"></h3>
+                    <!-- <div class="subheading mb-3">Divicion de Ciencias Basicas e Ingenieria</div> -->
+                </div>
+               </div>
+               <h2 class="mb-5 text-primary"><i class="fas fa-trophy text-warning"></i> Logros y Certificaciones</h2>
+               <ul class="fa-ul mb-0">
+                   <li>
+                       <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                       Creación de API REST con Node Js y SQL Server
+                   </li>
+                   <li>
+                       <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                       Desarrollo Web: HTML, CSS, Javascript, JQuery, Python y Django
+                   </li>
+                   <li>
+                       <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                       Python 3
+                   </li>
+                   <li>
+                       <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                       JavaScript y Jquery
+                   </li>
+                   <li>
+                       <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                       SQL: Creación de Bases de Datos
+                   </li>
+               </ul>
+               <!-- <div class="d-flex flex-column flex-md-row justify-content-between">
+                   <div class="flex-grow-1">
+                       <h3 class="mb-0">James Buchanan High School</h3>
+                       <div class="subheading mb-3">Technology Magnet Program</div>
+                       <p>GPA: 3.56</p>
+                   </div>
+                   <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
+               </div> -->
+           </div>
+       </section>
+       <hr class="m-0" />
+       <!-- Skills-->
+       <section class="resume-section" id="skills">
+           <div class="resume-section-content">
+               <h2 class="mb-1 text-primary"><i class="fas fa-graduation-cap text-warning"></i>Tecla Skills</h2>
+               <ul class="list-inline dev-icons">
+                   <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                   <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+               </ul>
+               <div class="brand-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
+                            <div class="brand_box">
+                                <h3><strong class="red">Tecnologias</strong></h3>
+                                <table class="table table-dark">
+                                    <thead>
+                                       <tr>
+                                         <th></th>
+                                         <th>Rating</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr class="nodejs">
+                                         <td>Node JS</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="frontend">
+                                         <td>FrontEnd</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="swagger">
+                                        <td>Swagger</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="javascript">
+                                        <td>Javascript</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                     </tbody>
+                                   </table>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
+                            <div class="brand_box">
+                                <h3><strong class="red">Conocimientos</strong></h3>
+                                <table class="table table-dark">
+                                    <thead>
+                                       <tr>
+                                         <th></th>
+                                         <th>Rating</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr class="basedatos">
+                                         <td>Base de Datos</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="apis">
+                                         <td>APIs</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="testing">
+                                        <td>Testing</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="seguridad">
+                                        <td>Seguridad</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="teoriaO">
+                                        <td>Teoria de objetos</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                     </tbody>
+                                   </table>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
+                            <div class="brand_box">
+                                <h3><strong class="red">Habilidades Blandas</strong></h3>
+                                <table class="table table-dark">
+                                    <thead>
+                                       <tr>
+                                         <th></th>
+                                         <th>Rating</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr class="enfoque">
+                                         <td>Enfoque</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="trabajoEquipo">
+                                         <td>Trabajo en equipo</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="compromiso">
+                                        <td>Compromiso</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="comunicacion">
+                                        <td>Comunicacion</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="capacidad">
+                                        <td>Capacidad de aprendizaje</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="resolucion">
+                                        <td>Resolucion de Problemas</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                     </tbody>
+                                   </table>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margin">
+                            <div class="brand_box">
+                                <h3><strong class="red">Desempeño</strong></h3>
+                                <table class="table table-dark">
+                                    <thead>
+                                       <tr>
+                                         <th></th>
+                                         <th>Rating</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr class="calidad">
+                                         <td>Calidad codigo</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="velocidad">
+                                         <td>Velocidad entrega</td>
+                                         <td>
+                                           <div class="stars-outer">
+                                             <div class="stars-inner"></div>
+                                           </div>
+                                         </td>
+                                       </tr>
+                                       <tr class="performance">
+                                        <td>Performance codigo</td>
+                                        <td>
+                                          <div class="stars-outer">
+                                            <div class="stars-inner"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                     </tbody>
+                                   </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+       </section>
+       <hr class="m-0" />
+       <!-- comentarios-->
+       <section class="resume-section" id="coments">
+        <div class="resume-section-content">
+        <h2 class="mb-5 text-primary">Comentarios</h2>
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+              <div class="input-group">
+                <span class="input-group-text">Agregar comentario</span>
+                <textarea type="reset" id="comentario" class="form-control" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+            <button id="comentar" type="button" class="btn btn-dark">Enviar</button>
+        </div>
+        <div id="lista-comentarios" class="resume-section-content">
+          
+        </div>
+          
+    </section>
+
+
+   </div>
+   <!-- Bootstrap core JS-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+   <script src="/js/comentarios.js"></script>
+   <script src="/js/perfil_tecler.js"></script>
+   <script src="/js/scripts.js"></script>
+</body>
+</html>

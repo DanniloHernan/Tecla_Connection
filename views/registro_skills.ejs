@@ -1,0 +1,560 @@
+<%- include('./cabeceras/cab_registro_skills')%>
+
+<body onload="authenticate()">
+
+    <div class="container pt-2">
+        <div>
+            <a class="d-flex justify-content-center my-3" href=""><img width="200" height="100" src="/iconos/Tecla.png"></a>
+        </div>
+        <div class="container row">
+            <form class="form-horizontal mx-auto text-center col-8 mb-0">
+                <!-- Form Name -->
+                <h1>Evaloacion Teclers</h1>
+                
+                <!-- Prepended text-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="prependedtext">ID TECLER</label>
+                  <div>
+                    <div class="input-group col-md-10">
+                      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="" type="text" required="">
+                    </div>
+                    <p class="help-block">Introduce el id del tecler a evaloar</p>
+                  </div>
+                  <button type="button" id="cerrarSesion" class="btn col-12 btn-dark"><a class="fw-bolder" href="http://localhost:3000/login">Cerrar Sesion</a></button>
+                </div>
+            </form>
+        </div>
+            
+    <div class="container row">
+            <form class="form-horizontal mx-auto my-5 col-6">
+                
+                <!-- Form Name -->
+                <h2>Rubro conocimientos</h2>
+                
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                  <label class="col-md-12 control-label" for="basedatos">Base de Datos</label>
+                  <div class="col-md-12"> 
+                    <label class="radio-inline" for="basedatos-0">
+                      <input type="radio" name="basedatos" id="basedatos-0" value="1" checked="checked">
+                      1
+                    </label> 
+                    <label class="radio-inline" for="basedatos-1">
+                      <input type="radio" name="basedatos" id="basedatos-1" value="2">
+                      2
+                    </label> 
+                    <label class="radio-inline" for="basedatos-2">
+                      <input type="radio" name="basedatos" id="basedatos-2" value="3">
+                      3
+                    </label> 
+                    <label class="radio-inline" for="basedatos-3">
+                      <input type="radio" name="basedatos" id="basedatos-3" value="4">
+                      4
+                    </label> 
+                    <label class="radio-inline" for="basedatos-4">
+                      <input type="radio" name="basedatos" id="basedatos-4" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                  <label class="col-md-12 control-label" for="apis">APIs</label>
+                  <div class="col-md-12"> 
+                    <label class="radio-inline" for="apis-0">
+                      <input type="radio" name="apis" id="apis-0" value="1" checked="checked">
+                      1
+                    </label> 
+                    <label class="radio-inline" for="apis-1">
+                      <input type="radio" name="apis" id="apis-1" value="2">
+                      2
+                    </label> 
+                    <label class="radio-inline" for="apis-2">
+                      <input type="radio" name="apis" id="apis-2" value="3">
+                      3
+                    </label> 
+                    <label class="radio-inline" for="apis-3">
+                      <input type="radio" name="apis" id="apis-3" value="4">
+                      4
+                    </label> 
+                    <label class="radio-inline" for="apis-4">
+                      <input type="radio" name="apis" id="apis-4" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                  <label class="col-md-12 control-label" for="testing">Testing</label>
+                  <div class="col-md-12"> 
+                    <label class="radio-inline" for="testing-0">
+                      <input type="radio" name="testing" id="testing-0" value="1" checked="checked">
+                      1
+                    </label> 
+                    <label class="radio-inline" for="testing-1">
+                      <input type="radio" name="testing" id="testing-1" value="2">
+                      2
+                    </label> 
+                    <label class="radio-inline" for="testing-2">
+                      <input type="radio" name="testing" id="testing-2" value="3">
+                      3
+                    </label> 
+                    <label class="radio-inline" for="testing-3">
+                      <input type="radio" name="testing" id="testing-3" value="4">
+                      4
+                    </label> 
+                    <label class="radio-inline" for="testing-4">
+                      <input type="radio" name="testing" id="testing-4" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                  <label class="col-md-12 control-label" for="seguridad">Seguridad</label>
+                  <div class="col-md-12"> 
+                    <label class="radio-inline" for="seguridad-0">
+                      <input type="radio" name="seguridad" id="seguridad-0" value="1" checked="checked">
+                      1
+                    </label> 
+                    <label class="radio-inline" for="seguridad-1">
+                      <input type="radio" name="seguridad" id="seguridad-1" value="2">
+                      2
+                    </label> 
+                    <label class="radio-inline" for="seguridad-2">
+                      <input type="radio" name="seguridad" id="seguridad-2" value="3">
+                      3
+                    </label> 
+                    <label class="radio-inline" for="seguridad-3">
+                      <input type="radio" name="seguridad" id="seguridad-3" value="4">
+                      4
+                    </label> 
+                    <label class="radio-inline" for="seguridad-4">
+                      <input type="radio" name="seguridad" id="seguridad-4" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                  <label class="col-md-12 control-label" for="objetos">Teoria de objetos</label>
+                  <div class="col-md-12"> 
+                    <label class="radio-inline" for="objetos-0">
+                      <input type="radio" name="objetos" id="objetos-0" value="1" checked="checked">
+                      1
+                    </label> 
+                    <label class="radio-inline" for="objetos-1">
+                      <input type="radio" name="objetos" id="objetos-1" value="2">
+                      2
+                    </label> 
+                    <label class="radio-inline" for="objetos-2">
+                      <input type="radio" name="objetos" id="objetos-2" value="3">
+                      3
+                    </label> 
+                    <label class="radio-inline" for="objetos-3">
+                      <input type="radio" name="objetos" id="objetos-3" value="4">
+                      4
+                    </label> 
+                    <label class="radio-inline" for="objetos-4">
+                      <input type="radio" name="objetos" id="objetos-4" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+                <button type="button" id="registrarConocimiento" class="btn col-12 btn-danger">Registrar conocimientos</button>
+                </form>
+
+    </div>
+
+    <div class="container row">
+                
+                <form class="form-horizontal mx-auto my-5 col-6">
+                
+                    <!-- Form Name -->
+                    <h2>Rubro Tecnologias</h2>
+                    
+                    <!-- Multiple Radios (inline) -->
+                    <div class="form-group">
+                        <label class="col-md-12 control-label" for="nodejs">Node JS</label>
+                        <div class="col-md-12"> 
+                          <label class="radio-inline" for="nodejs-0">
+                            <input type="radio" name="nodejs" id="nodejs-0" value="1" checked="checked">
+                            1
+                          </label> 
+                          <label class="radio-inline" for="nodejs-1">
+                            <input type="radio" name="nodejs" id="nodejs-1" value="2">
+                            2
+                          </label> 
+                          <label class="radio-inline" for="nodejs-2">
+                            <input type="radio" name="nodejs" id="nodejs-2" value="3">
+                            3
+                          </label> 
+                          <label class="radio-inline" for="nodejs-3">
+                            <input type="radio" name="nodejs" id="nodejs-3" value="4">
+                            4
+                          </label> 
+                          <label class="radio-inline" for="nodejs-4">
+                            <input type="radio" name="nodejs" id="nodejs-4" value="5">
+                            5
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <!-- Multiple Radios (inline) -->
+                      <div class="form-group">
+                        <label class="col-md-12 control-label" for="frontend">FrontEnd</label>
+                        <div class="col-md-12"> 
+                          <label class="radio-inline" for="frontend-0">
+                            <input type="radio" name="frontend" id="frontend-0" value="1" checked="checked">
+                            1
+                          </label> 
+                          <label class="radio-inline" for="frontend-1">
+                            <input type="radio" name="frontend" id="frontend-1" value="2">
+                            2
+                          </label> 
+                          <label class="radio-inline" for="frontend-2">
+                            <input type="radio" name="frontend" id="frontend-2" value="3">
+                            3
+                          </label> 
+                          <label class="radio-inline" for="frontend-3">
+                            <input type="radio" name="frontend" id="frontend-3" value="4">
+                            4
+                          </label> 
+                          <label class="radio-inline" for="frontend-4">
+                            <input type="radio" name="frontend" id="frontend-4" value="5">
+                            5
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <!-- Multiple Radios (inline) -->
+                      <div class="form-group">
+                        <label class="ccol-md-12 control-label" for="swagger">Swagger</label>
+                        <div class="col-md-12"> 
+                          <label class="radio-inline" for="swagger-0">
+                            <input type="radio" name="swagger" id="swagger-0" value="1" checked="checked">
+                            1
+                          </label> 
+                          <label class="radio-inline" for="swagger-1">
+                            <input type="radio" name="swagger" id="swagger-1" value="2">
+                            2
+                          </label> 
+                          <label class="radio-inline" for="swagger-2">
+                            <input type="radio" name="swagger" id="swagger-2" value="3">
+                            3
+                          </label> 
+                          <label class="radio-inline" for="swagger-3">
+                            <input type="radio" name="swagger" id="swagger-3" value="4">
+                            4
+                          </label> 
+                          <label class="radio-inline" for="swagger-4">
+                            <input type="radio" name="swagger" id="swagger-4" value="5">
+                            5
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <!-- Multiple Radios (inline) -->
+                      <div class="form-group">
+                        <label class="col-md-12 control-label" for="javascript">Javascript</label>
+                        <div class="ccol-md-12"> 
+                          <label class="radio-inline" for="javascript-0">
+                            <input type="radio" name="javascript" id="javascript-0" value="1" checked="checked">
+                            1
+                          </label> 
+                          <label class="radio-inline" for="javascript-1">
+                            <input type="radio" name="javascript" id="javascript-1" value="2">
+                            2
+                          </label> 
+                          <label class="radio-inline" for="javascript-2">
+                            <input type="radio" name="javascript" id="javascript-2" value="3">
+                            3
+                          </label> 
+                          <label class="radio-inline" for="javascript-3">
+                            <input type="radio" name="javascript" id="javascript-3" value="4">
+                            4
+                          </label> 
+                          <label class="radio-inline" for="javascript-4">
+                            <input type="radio" name="javascript" id="javascript-4" value="5">
+                            5
+                          </label>
+                        </div>
+                      </div>
+                      <button type="button" id="registrarTecnologias" class="btn col-12 btn-danger">Registrar tecnologias</button>
+                    </form>
+            </div>
+
+        <dic class="container row">
+            <form class="form-horizontal mx-auto my-5 col-6">
+                
+                <!-- Form Name -->
+                <h2>Rubro Habilidades Blandas</h2>
+                
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                    <label class="col-md-12 control-label" for="enfoque">Enfoque</label>
+                    <div class="col-md-12"> 
+                      <label class="radio-inline" for="enfoque-0">
+                        <input type="radio" name="enfoque" id="enfoque-0" value="1" checked="checked">
+                        1
+                      </label> 
+                      <label class="radio-inline" for="enfoque-1">
+                        <input type="radio" name="enfoque" id="enfoque-1" value="2">
+                        2
+                      </label> 
+                      <label class="radio-inline" for="enfoque-2">
+                        <input type="radio" name="enfoque" id="enfoque-2" value="3">
+                        3
+                      </label> 
+                      <label class="radio-inline" for="enfoque-3">
+                        <input type="radio" name="enfoque" id="enfoque-3" value="4">
+                        4
+                      </label> 
+                      <label class="radio-inline" for="enfoque-4">
+                        <input type="radio" name="enfoque" id="enfoque-4" value="5">
+                        5
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Multiple Radios (inline) -->
+                  <div class="form-group">
+                    <label class="ccol-md-12 control-label" for="trabajoequipo">Trabajo en equipo</label>
+                    <div class="col-md-12"> 
+                      <label class="radio-inline" for="trabajoequipo-0">
+                        <input type="radio" name="trabajoequipo" id="trabajoequipo-0" value="1" checked="checked">
+                        1
+                      </label> 
+                      <label class="radio-inline" for="trabajoequipo-1">
+                        <input type="radio" name="trabajoequipo" id="trabajoequipo-1" value="2">
+                        2
+                      </label> 
+                      <label class="radio-inline" for="trabajoequipo-2">
+                        <input type="radio" name="trabajoequipo" id="trabajoequipo-2" value="3">
+                        3
+                      </label> 
+                      <label class="radio-inline" for="trabajoequipo-3">
+                        <input type="radio" name="trabajoequipo" id="trabajoequipo-3" value="4">
+                        4
+                      </label> 
+                      <label class="radio-inline" for="trabajoequipo-4">
+                        <input type="radio" name="trabajoequipo" id="trabajoequipo-4" value="5">
+                        5
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Multiple Radios (inline) -->
+                  <div class="form-group">
+                    <label class="col-md-12 control-label" for="resproblemas">Resolucion de Problemas</label>
+                    <div class="col-md-12"> 
+                      <label class="radio-inline" for="resproblemas-0">
+                        <input type="radio" name="resproblemas" id="resproblemas-0" value="1" checked="checked">
+                        1
+                      </label> 
+                      <label class="radio-inline" for="resproblemas-1">
+                        <input type="radio" name="resproblemas" id="resproblemas-1" value="2">
+                        2
+                      </label> 
+                      <label class="radio-inline" for="resproblemas-2">
+                        <input type="radio" name="resproblemas" id="resproblemas-2" value="3">
+                        3
+                      </label> 
+                      <label class="radio-inline" for="resproblemas-3">
+                        <input type="radio" name="resproblemas" id="resproblemas-3" value="4">
+                        4
+                      </label> 
+                      <label class="radio-inline" for="resproblemas-4">
+                        <input type="radio" name="resproblemas" id="resproblemas-4" value="5">
+                        5
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Multiple Radios (inline) -->
+                  <div class="form-group">
+                    <label class="col-md-12 control-label" for="compromiso">Compromiso</label>
+                    <div class="col-md-12"> 
+                      <label class="radio-inline" for="compromiso-0">
+                        <input type="radio" name="compromiso" id="compromiso-0" value="1" checked="checked">
+                        1
+                      </label> 
+                      <label class="radio-inline" for="compromiso-1">
+                        <input type="radio" name="compromiso" id="compromiso-1" value="2">
+                        2
+                      </label> 
+                      <label class="radio-inline" for="compromiso-2">
+                        <input type="radio" name="compromiso" id="compromiso-2" value="3">
+                        3
+                      </label> 
+                      <label class="radio-inline" for="compromiso-3">
+                        <input type="radio" name="compromiso" id="compromiso-3" value="4">
+                        4
+                      </label> 
+                      <label class="radio-inline" for="compromiso-4">
+                        <input type="radio" name="compromiso" id="compromiso-4" value="5">
+                        5
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Multiple Radios (inline) -->
+                  <div class="form-group">
+                    <label class="ccol-md-12 control-label" for="capacidad">Capacidad de aprendizaje</label>
+                    <div class="col-md-12"> 
+                      <label class="radio-inline" for="capacidad-0">
+                        <input type="radio" name="capacidad" id="capacidad-0" value="1" checked="checked">
+                        1
+                      </label> 
+                      <label class="radio-inline" for="capacidad-1">
+                        <input type="radio" name="capacidad" id="capacidad-1" value="2">
+                        2
+                      </label> 
+                      <label class="radio-inline" for="capacidad-2">
+                        <input type="radio" name="capacidad" id="capacidad-2" value="3">
+                        3
+                      </label> 
+                      <label class="radio-inline" for="capacidad-3">
+                        <input type="radio" name="capacidad" id="capacidad-3" value="4">
+                        4
+                      </label> 
+                      <label class="radio-inline" for="capacidad-4">
+                        <input type="radio" name="capacidad" id="capacidad-4" value="5">
+                        5
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Multiple Radios (inline) -->
+                  <div class="form-group">
+                    <label class="col-md-12 control-label" for="comunicacion">Comunicacion</label>
+                    <div class="col-md-12"> 
+                      <label class="radio-inline" for="comunicacion-0">
+                        <input type="radio" name="comunicacion" id="comunicacion-0" value="1" checked="checked">
+                        1
+                      </label> 
+                      <label class="radio-inline" for="comunicacion-1">
+                        <input type="radio" name="comunicacion" id="comunicacion-1" value="2">
+                        2
+                      </label> 
+                      <label class="radio-inline" for="comunicacion-2">
+                        <input type="radio" name="comunicacion" id="comunicacion-2" value="3">
+                        3
+                      </label> 
+                      <label class="radio-inline" for="comunicacion-3">
+                        <input type="radio" name="comunicacion" id="comunicacion-3" value="4">
+                        4
+                      </label> 
+                      <label class="radio-inline" for="comunicacion-4">
+                        <input type="radio" name="comunicacion" id="comunicacion-4" value="5">
+                        5
+                      </label>
+                    </div>
+                  </div>
+                <button type="button" id="registrarHabilidades" class="btn col-12 btn-danger">Registrar habilidades</button>
+                </form>
+        </dic>
+        
+        <div class="container row">
+
+                <form class="form-horizontal mx-auto my-5 col-6">
+                
+                    <!-- Form Name -->
+                    <h2>Rubro Desempeño</h2>
+                    
+                    <!-- Multiple Radios (inline) -->
+                    <div class="form-group">
+                        <label class="col-md-12 control-label" for="calidad">Calidad codigo</label>
+                        <div class="col-md-12"> 
+                          <label class="radio-inline" for="calidad-0">
+                            <input type="radio" name="calidad" id="calidad-0" value="1" checked="checked">
+                            1
+                          </label> 
+                          <label class="radio-inline" for="calidad-1">
+                            <input type="radio" name="calidad" id="calidad-1" value="2">
+                            2
+                          </label> 
+                          <label class="radio-inline" for="calidad-2">
+                            <input type="radio" name="calidad" id="calidad-2" value="3">
+                            3
+                          </label> 
+                          <label class="radio-inline" for="calidad-3">
+                            <input type="radio" name="calidad" id="calidad-3" value="4">
+                            4
+                          </label> 
+                          <label class="radio-inline" for="calidad-4">
+                            <input type="radio" name="calidad" id="calidad-4" value="5">
+                            5
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <!-- Multiple Radios (inline) -->
+                      <div class="form-group">
+                        <label class="col-md-12 control-label" for="velocidad">Velocidad entrega</label>
+                        <div class="col-md-12"> 
+                          <label class="radio-inline" for="velocidad-0">
+                            <input type="radio" name="velocidad" id="velocidad-0" value="1" checked="checked">
+                            1
+                          </label> 
+                          <label class="radio-inline" for="velocidad-1">
+                            <input type="radio" name="velocidad" id="velocidad-1" value="2">
+                            2
+                          </label> 
+                          <label class="radio-inline" for="velocidad-2">
+                            <input type="radio" name="velocidad" id="velocidad-2" value="3">
+                            3
+                          </label> 
+                          <label class="radio-inline" for="velocidad-3">
+                            <input type="radio" name="velocidad" id="velocidad-3" value="4">
+                            4
+                          </label> 
+                          <label class="radio-inline" for="velocidad-4">
+                            <input type="radio" name="velocidad" id="velocidad-4" value="5">
+                            5
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <!-- Multiple Radios (inline) -->
+                      <div class="form-group">
+                        <label class="col-md-12 control-label" for="performance">Performance codigo</label>
+                        <div class="col-md-12"> 
+                          <label class="radio-inline" for="performance-0">
+                            <input type="radio" name="performance" id="performance-0" value="1" checked="checked">
+                            1
+                          </label> 
+                          <label class="radio-inline" for="performance-1">
+                            <input type="radio" name="performance" id="performance-1" value="2">
+                            2
+                          </label> 
+                          <label class="radio-inline" for="performance-2">
+                            <input type="radio" name="performance" id="performance-2" value="3">
+                            3
+                          </label> 
+                          <label class="radio-inline" for="performance-3">
+                            <input type="radio" name="performance" id="performance-3" value="4">
+                            4
+                          </label> 
+                          <label class="radio-inline" for="performance-4">
+                            <input type="radio" name="performance" id="performance-4" value="5">
+                            5
+                          </label>
+                        </div>
+                      </div>
+                      <button type="button" id="registrarDesempeño" class="btn col-12 btn-danger">Registrar desempeño</button>
+                    </form>
+            </div>
+
+            
+    </div>
+
+
+    
+    <script src="/js/index.registro.skills.js"></script>
+</body>
+</html>

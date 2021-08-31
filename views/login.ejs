@@ -1,0 +1,45 @@
+<%- include('./cabeceras/cab_login.ejs')%>
+
+<body>
+    
+    <main class="form-signin text-center">
+      <form>
+        <a href="http://localhost:3000/tecla_connection"><img width="150" height="75" src="/iconos/Tecla.png"></a>
+        <label for="inputEmail" class="visually-hidden">Usuario</label>
+        <input type="text" id="user" class="form-control mt-5" placeholder="Usuario" required autofocus>
+        <label for="inputPassword" class="visually-hidden">Contraseña</label>
+        <input type="password" id="password" class="form-control" placeholder="Password" required>
+        <a class="btn btn-primary" id="iniciar" type="button">Iniciar sesion</a>
+        
+        <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+        <a class="btn btn-secondary" id="registro" href="#" data-open="modal1" type="button">Administrador</a>
+      </form>
+    </main>
+
+    <div class="modal" id="modal1">
+      <div class="modal-dialog">
+        <div class="modal-header">
+         <h2>Iniciar como administrador</h2>
+        </div>
+        <div class="modal-content">
+         <form>
+          <label for="inputEmail" class="visually-hidden">Usuario</label>
+          <input type="text" id="userAdm" class="form-control mb-3" placeholder="Usuario" required autofocus>
+          <label for="inputPassword" class="visually-hidden">Contraseña</label>
+          <input type="password" id="passwordAdm" class="form-control mb-3" placeholder="Password" required>
+            <div class="d-grid ">
+               <button id="iniciaAdm" class="btn btn-primary btn-lg" type="button ">Enviar</button>
+            </div>
+         </form>
+      </div>
+        <div class="modal-footer">
+         <div class="d-grid ">
+            <button class="btn btn-dark" type="button ">Cerrar</button>
+         </div>
+      </div>
+      </div>
+    </div>
+
+   <script src="/js/login.js"> </script>
+  </body>
+</html>

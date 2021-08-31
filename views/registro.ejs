@@ -1,0 +1,62 @@
+<%- include('./cabeceras/cab_registro')%>
+
+<body>
+
+    <div class="container pt-2">
+        <div>
+            <a class="d-flex justify-content-center my-3" href=""><img width="200" height="100" src="/iconos/Tecla.png"></a>
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <form class="col-10" action=""  id="form">
+                <div class="form"> 
+                   <h2>Registro Teclers en Tecla Connection</h2>
+       
+                   <div class="grupo">
+                       <input type="text" name="" id="name"  formnovalidate  required><span class="barra"></span>
+                       <label for="">Nombre(s)</label>
+                   </div>
+       
+                   <div class="grupo">
+                       <input type="text" name="" id="lastname"  formnovalidate  required><span class="barra"></span>
+                       <label for="">Apellidos</label>
+                   </div>
+       
+                   <!-- <div class="grupo">
+                       <input type="cumpleaños" name="" id="cumpleaños" required><span class="barra"></span>
+                       <label for="">Cumpleaños: AAAA/MM/DD</label>
+                   </div> -->
+       
+                   <div class="grupo">
+                       <input type="Usuario" name="" id="usuario" required><span class="barra"></span>
+                       <label for="">Nombre Usuario</label>
+                   </div>
+       
+                   <div class="grupo">
+                       <input type="email" name="" id="email" required><span class="barra"></span>
+                       <label for="">Email</label>
+                   </div>
+       
+                   <div class="grupo">
+                       <input type="password" name="" id="password" required><span class="barra"></span>
+                       <label for="">Password(Debe tener al menos 8 caracteres, un CARACTER ESPECIAL una MAYUSCULA y un numero)</label>
+                   </div>
+       
+       
+                   <div class="mx-auto mt-5 col-6">
+                       <button type="button" class="fw-bold" id="register">Registrar Tecler</button>
+                   </div>
+                   <!-- <button onclick="registrar()" type="submit">Registrarse</button> -->
+               </div>
+           </form>
+           <a href=""></a>
+        </div>
+        <div class="mx-auto mt-5 col-12">
+            <button class="fw-bold" id="registroEvaloacion"><a href="http://localhost:3000/registro_skills">Registrar evaloaciones de Tecler</a></button>
+        </div>
+    </div>
+
+    
+    <script src="/js/index.registro.js"></script>
+</body>
+</html>
